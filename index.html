@@ -31,6 +31,8 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+
     <script>
         var app = angular.module('DDC', []);
         app.controller('DDCCtrl', function ($scope) {
@@ -56,8 +58,8 @@
                 }
             }
         });
-    </script>
 
+    </script>
 </head>
 
 <body ng-app="DDC" ng-controller="DDCCtrl">
@@ -149,7 +151,7 @@
                                 <li>
                                     <a href="#clients" class="menu">Clients</a>
                                 </li>
-                                <li>
+                                <li id="#prodPopup">
                                     <a href="#popup-article" class="menu">PRODUCTS</a>
                                 </li>
                                 <li class="dropdown dropbtn">
@@ -207,7 +209,7 @@
                     </div>
 
                     <!--Call to Action-->
-                    <a href="#" class="button">Connect with Us</a>
+                    <a href="#contact" class="button">Connect with Us</a>
                     <!--End Call to Action-->
 
                 </div>
@@ -310,47 +312,113 @@
             <!--End of Introduction-->
 
 
-            <!--Gallery-->
+            <!--Products-->
             <section id="products" class="secondary-color text-center scrollto clearfix ">
-                <div class="row clearfix">
-
+                <div>
                     <div class="section-heading">
                         <h3>PRODUCTS</h3>
                         <h2 class="section-title">We have the following products</h2>
                     </div>
                 </div>
                 <aside class="row text-center scrollto clearfix" data-featherlight-gallery data-featherlight-filter="a">
+                    <div class="responsive wow fadeInUp">
+                        <div class="gallery thumbnail">
+                            <a target="_blank" href="images/products/networking.png">
+                                <img src="images/products/networking.png" alt="networking" width="600" height="400">
+                            </a>
+                            <div class="desc w3-container w3-pale-blue w3-leftbar w3-border-blue">Networking</div>
+                        </div>
+                    </div>
 
 
-                    <a href="images/products/networking.png" data-featherlight="image" class="col-3 wow fadeIn" data-wow-delay="0.1s">
-                        <img src="images/products/networking.png" alt="Landing Page" class="w3-container w3-border w3-round-xlarge"/><h5 class="w3-container w3-pale-blue w3-leftbar w3-border-red">Networking</h5>
-                    </a>
-                    <a href="images/products/Scanners.png" data-featherlight="image" class="col-3 wow fadeIn" data-wow-delay="0.5s">
-                        <img src="images/products/Scanners.png" alt="Landing Page" class="w3-container w3-border w3-round-xlarge"/><h5 class="w3-container w3-pale-blue w3-leftbar w3-border-blue">Scanner</h5>
-                    </a>
-                    <a href="images/products/Telecommunication2.jpg" data-featherlight="image" class="col-3 wow fadeIn" data-wow-delay="1.1s">
-                        <img src="images/products/Telecommunication2.jpg" alt="Landing Page" class="w3-container w3-border w3-round-xlarge"/><h5 class="w3-container w3-pale-blue w3-leftbar w3-border-green">Telecommunication</h5>
-                    </a>
-                    <a href="images/products/Data-Storage-Solutions.png" data-featherlight="image" class="col-3 wow fadeIn" data-wow-delay="0.3s">
-                        <img src="images/products/Data-Storage-Solutions.png" alt="Landing Page" class="w3-container w3-border w3-round-xlarge"/><h5 class="w3-container w3-pale-blue w3-leftbar w3-border-red">Storage
-                            Solutions</h5>
-                    </a>
-                    <a href="images/products/Interactive Boards.png" data-featherlight="image" class="col-3 wow fadeIn" data-wow-delay="0.9s">
-                        <img src="images/products/Interactive Boards.png" alt="Landing Page"class="w3-container w3-border w3-round-xlarge" /><h5 class="w3-container w3-pale-blue w3-leftbar w3-border-blue">Interactive
-                            Boards</h5>
-                    </a>
-                    <a href="images/products/Magicard_kaartprinter-Rio-Pro-PPC.jpg" data-featherlight="image" class="col-3 wow fadeIn" data-wow-delay="0.7s">
-                        <img src="images/products/Magicard_kaartprinter-Rio-Pro-PPC.jpg" alt="Landing Page" class="w3-container w3-border w3-round-xlarge"/><h5 class="w3-container w3-pale-blue w3-leftbar w3-border-green">Printers</h5>
-                    </a>
+                    <div class="responsive wow fadeInUp">
+                        <div class="gallery thumbnail">
+                            <a target="_blank" href="images/products/Scanners.png">
+                                <img src="images/products/Scanners.png" alt="networking" width="600" height="400">
+                            </a>
+                            <div class="desc w3-container w3-pale-blue w3-leftbar w3-border-blue">Scanners</div>
+                        </div>
+                    </div>
+
+                    <div class="responsive wow fadeInUp">
+                        <div class="gallery thumbnail">
+                            <a target="_blank" href="images/products/Telecommunication2.jpg">
+                                <img src="images/products/Telecommunication2.jpg" alt="networking" width="600" height="400">
+                            </a>
+                            <div class="desc w3-container w3-pale-blue w3-leftbar w3-border-blue">Telecommunication</div>
+                        </div>
+                    </div>
+
+                    <div class="responsive wow fadeInUp">
+                        <div class="gallery thumbnail">
+                            <a target="_blank" href="images/products/Data-Storage-Solutions.png">
+                                <img src="images/products/Data-Storage-Solutions.png" alt="networking" width="600" height="400">
+                            </a>
+                            <div class="desc w3-container w3-pale-blue w3-leftbar w3-border-blue">Data Storage Solutions</div>
+                        </div>
+                    </div>
+                    <div class="responsive wow fadeInUp">
+                        <div class="gallery thumbnail">
+                            <a target="_blank" href="images/products/Interactive Boards.png">
+                                <img src="images/products/Interactive Boards.png" alt="networking" width="600" height="400">
+                            </a>
+                            <div class="desc w3-container w3-pale-blue w3-leftbar w3-border-blue">Interactive Boards</div>
+                        </div>
+                    </div>
+                    <div class="responsive wow fadeInUp">
+                        <div class="gallery thumbnail">
+                            <a target="_blank" href="images/products/networking.png">
+                                <img src="images/products/networking.png" alt="networking" width="600" height="400">
+                            </a>
+                            <div class="desc w3-container w3-pale-blue w3-leftbar w3-border-blue">Data Storage Solutions</div>
+                        </div>
+                    </div>
+                    <div class="responsive wow fadeInUp">
+                        <div class="gallery thumbnail">
+                            <a target="_blank" href="images/products/Security Systems.jpg">
+                                <img src="images/products/Security Systems.jpg" alt="networking" width="600" height="400">
+                            </a>
+                            <div class="desc w3-container w3-pale-blue w3-leftbar w3-border-blue">Security Systems</div>
+                        </div>
+                    </div>
+                    <div class="responsive wow fadeInUp">
+                        <div class="gallery thumbnail">
+                            <a target="_blank" href="images/products/id card Javelin_J200i.jpg">
+                                <img src="images/products/id card Javelin_J200i.jpg" alt="networking" width="600" height="400">
+                            </a>
+                            <div class="desc w3-container w3-pale-blue w3-leftbar w3-border-blue">ID Cards Printing Machines</div>
+                        </div>
+                    </div>
+
+                    <div class="clearfix"></div>
+
+                    <!--Partners-->
+                    <div class="section-heading">
+                        <h2 class="section-title">Our Partners</h2>
+                    </div>
+                    <div class="container">
+                        <section class="customer-logos slider">
+                            <div class="slide"><img src="https://image.freepik.com/free-vector/luxury-letter-e-logo-design_1017-8903.jpg"></div>
+                            <div><img src="https://image.freepik.com/free-vector/3d-box-logo_1103-876.jpg"></div>
+                            <div><img src="https://image.freepik.com/free-vector/blue-tech-logo_1103-822.jpg"></div>
+                            <div><img src="https://image.freepik.com/free-vector/colors-curl-logo-template_23-2147536125.jpg"></div>
+                            <div><img src="https://image.freepik.com/free-vector/abstract-cross-logo_23-2147536124.jpg"></div>
+                            <div><img src="https://image.freepik.com/free-vector/football-logo-background_1195-244.jpg"></div>
+                            <div><img src="https://image.freepik.com/free-vector/background-of-spots-halftone_1035-3847.jpg"></div>
+                            <div><img src="https://image.freepik.com/free-vector/retro-label-on-rustic-background_82147503374.jpg"></div>
+                        </section>
+                    </div>
+
+                     <!--End Partners-->
                 </aside>
 
             </section>
-            <!--End of Gallery-->
+            <!--End of Products-->
 
             <!--Content Section-->
             <div id="services" class="scrollto clearfix">
 
-                <div class="row no-padding-bottom clearfix">
+                <div class="row no-padding-bottom clearfix wow fadeInUp">
 
 
                     <!--Content Left Side-->
@@ -401,13 +469,19 @@
             <section id="clients" class="scrollto clearfix">
                 <div class="row clearfix">
 
-                    <div class="col-3">
+                    <div class="col-3 wow fadeInUp">
 
                         <div class="section-heading">
                             <h3>TRUST</h3>
                             <h2 class="section-title">Companies who use our services</h2>
-                            <p class="section-subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam!</p>
+                            <p class="section-subtitle">Our clients are at the core of our success. We are very proud of
+                                the work we do. This is represented in how our sites look and function, and how our clients
+                                think about us. We have a vast array of clients from both small and large companies to non-profit
+                                organizations. A large majority of our clients have been with us for well over 10 years –
+                                showing that we are honestly reliable and provide long-term customer service. Below is a
+                                sample of some of the sites we have designed, have marketed across the internet, and/or regularly
+                                maintain.
+                            </p>
                         </div>
 
                     </div>
@@ -487,7 +561,7 @@
                     </div>
 
                     <!--User Testimonial-->
-                    <blockquote class="col-3 testimonial classic">
+                    <blockquote class="col-3 testimonial classic wow fadeInUp">
                         <img src="images/user-images/user-1.jpg" alt="User" />
                         <div>abc</div>
                         <div>abc@mail.com</div>
@@ -496,8 +570,8 @@
                     <!-- End of Testimonial-->
 
                     <!--User Testimonial-->
-                    <blockquote class="col-3 testimonial classic">
-                        <img src="images/user-images/user-1.jpg" alt="User" />
+                    <blockquote class="col-3 testimonial classic wow fadeInUp">
+                        <img src="images/user-images/user-3.jpg" alt="User" />
                         <div>abc</div>
                         <div>abc@mail.com</div>
                         <footer>Director</footer>
@@ -505,11 +579,11 @@
                     <!-- End of Testimonial-->
 
                     <!--User Testimonial-->
-                    <blockquote class="col-3 testimonial classic">
-                        <img src="images/user-images/user-3.jpg" alt="User" />
-                        <div>abc</div>
-                        <div>abc@mail.com</div>
-                        <footer>Designer</footer>
+                    <blockquote class="col-3 testimonial classic wow fadeInUp">
+                        <img src="images/user-images/user-2.jpg" alt="User" />
+                        <div>Joseph Vibik</div>
+                        <div>Joseph@ddcuae.ae</div>
+                        <footer>Software Engineer</footer>
                     </blockquote>
                     <!-- End of Testimonial-->
 
@@ -526,11 +600,15 @@
 
                     <div class="section-heading">
                         <h3>Contact Us</h3>
-                        <h2 class="section-title">We like to build a relationship you</h2>
+                        <h2 class="section-title">We like to build a relationship with you</h2>
                     </div>
 
+
+                    <div class="col-3 wow fadeInUp">
+                        <div id="map" style="width:400px;height:400px;background:#4593f7"></div>
+                    </div>
                     <!--User address-->
-                    <blockquote class="col-2 testimonial classic">
+                    <blockquote class="col-3 testimonial classic">
 
                         <!--Icon Block-->
                         <div class="icon-block icon-top wow fadeInUp" data-wow-delay="0.1s">
@@ -560,7 +638,7 @@
                     <!-- End of address-->
 
                     <!--User form-->
-                    <blockquote class="col-2 testimonial classic">
+                    <blockquote class="col-3 testimonial classic">
                         <form name="contactform" method="post" action="send_form_email.php">
                             <table width="450px" class="tableprop wow fadeInUp" data-wow-delay="0.1s">
                                 <tr>
@@ -592,7 +670,7 @@
                                         <label for="telephone">Telephone Number</label>
                                     </td>
                                     <td valign="top">
-                                        <input type="number" name="telephone" maxlength="30" size="30">
+                                        <input type="text" name="telephone" maxlength="30" size="30">
                                     </td>
                                 </tr>
                                 <tr>
@@ -605,7 +683,7 @@
                                 </tr>
                                 <tr>
                                     <td colspan="2" style="text-align:center">
-                                        <button type="submit" name="submit">Send</button>
+                                        <button type="submit" class="w3-button w3-blue" name="submit">Send</button>
                                     </td>
                                 </tr>
                             </table>
@@ -634,9 +712,9 @@
                         <a ng-click="hideandshow('DeskAlert_Software')" class="w3-card">DeskAlert Software</a>
                     </div>
                     <div class="section-heading">
-                            <h3>LEADERSHIP</h3>
-                            <h2 class="section-title">MEET OUR TEAM</h2>
-                        </div>
+                        <h3>LEADERSHIP</h3>
+                        <h2 class="section-title">MEET OUR TEAM</h2>
+                    </div>
                     <div ng-show="networking">
                         <h1>networking</h1>
                         <a href="#"><button ng-click="showHeader = true" class="popup__close">close</button></a>
@@ -741,7 +819,41 @@
         <script src="js/images-loaded.min.js"></script>
         <script src="js/lightbox.min.js"></script>
         <script src="js/site.js"></script>
-
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+        <script>
+            function myMap() {
+                var mapOptions = {
+                    center: new google.maps.LatLng(24.467260, 54.375150),
+                    zoom: 13,
+                    mapTypeId: google.maps.MapTypeId.ROADMAP
+                }
+                var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+            }
+        </script>
+        <script>
+            $(document).ready(function () {
+                $('.customer-logos').slick({
+                    slidesToShow: 6,
+                    slidesToScroll: 1,
+                    autoplay: true,
+                    autoplaySpeed: 1500,
+                    arrows: false,
+                    dots: false,
+                    pauseOnHover: false,
+                    responsive: [{
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 4
+                        }
+                    }, {
+                        breakpoint: 520,
+                        settings: {
+                            slidesToShow: 3
+                        }
+                    }]
+                });
+            });</script>
+        <script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
 </body>
 
 </html>
