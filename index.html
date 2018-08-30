@@ -10,7 +10,7 @@
     <meta name="description" content="Digital Dimension Computers: Best It Solution in U.A.E." />
     <meta name="keywords" content="Digital Dimension Computers: Best It Solution in U.A.E." />
     <meta name="author" content="Joseph Vibik" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <!--Page Title-->
     <title>Digital Dimension Computers: Best It Solution in U.A.E.</title>
@@ -30,6 +30,7 @@
     <!--Google Webfonts-->
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
 
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css"> -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
 
 
@@ -74,12 +75,12 @@
     </div>
     <!--End of Preloader-->
 
-    <div class="page-border" data-wow-duration="0.7s" data-wow-delay="0.2s">
+    <!-- <div class="page-border" data-wow-duration="0.7s" data-wow-delay="0.2s">
         <div class="top-border wow fadeInDown animated" style="visibility: visible; animation-name: fadeInDown;"></div>
         <div class="right-border wow fadeInRight animated" style="visibility: visible; animation-name: fadeInRight;"></div>
         <div class="bottom-border wow fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;"></div>
         <div class="left-border wow fadeInLeft animated" style="visibility: visible; animation-name: fadeInLeft;"></div>
-    </div>
+    </div> -->
 
     <div id="wrapper">
 
@@ -151,8 +152,8 @@
                                 <li>
                                     <a href="#clients" class="menu">Clients</a>
                                 </li>
-                                <li id="#prodPopup">
-                                    <a href="#popup-article" class="menu">PRODUCTS</a>
+                                <li>
+                                    <a id="demo01" href="#animatedModal" class="menu">PRODUCTS</a>
                                 </li>
                                 <li class="dropdown dropbtn">
                                     <a href="#infra" class="menu">INFRASTRUCTURE SOLUTIONS <i class="fa fa-caret-down"></i></a>
@@ -409,7 +410,7 @@
                         </section>
                     </div>
 
-                     <!--End Partners-->
+                    <!--End Partners-->
                 </aside>
 
             </section>
@@ -417,10 +418,7 @@
 
             <!--Content Section-->
             <div id="services" class="scrollto clearfix">
-
                 <div class="row no-padding-bottom clearfix wow fadeInUp">
-
-
                     <!--Content Left Side-->
                     <div class="col-3">
                         <!--User Testimonial-->
@@ -435,7 +433,7 @@
                     </div>
                     <!--End Content Left Side-->
 
-                    <!--Content of the Right Side-->
+                    <!--Content of the center Side-->
                     <div class="col-3">
                         <div class="section-heading">
                             <h3>BELIEVING</h3>
@@ -454,11 +452,14 @@
                         </p>
 
                     </div>
-                    <!--End Content Right Side-->
+                    <!--End Content center Side-->
 
+                    <!--Content Right Side-->
                     <div class="col-3">
                         <img src="images/dancer1.jpg" alt="Dancer" />
                     </div>
+
+                    <!--End Content Right Side-->
 
                 </div>
 
@@ -695,64 +696,100 @@
             </aside>
             <!--End of Contact Us-->
 
+
             <!--model popup-->
+            <div id="animatedModal" style="top: 20px;">
+                <!--THIS IS IMPORTANT! to close the modal, the class name has to match the name given on the ID  class="close-animatedModal" -->
 
-            <button ng-click="showHeader=false"> <a href="#popup-article">open popup</a></button>
+                <div class="close-animatedModal popup__close" style="float: right;">
+                </div>
 
-            <div id="popup-article" class="popup">
-                <div class="popup__block">
-                    <div class="sidenav">
-                        <a ng-click="hideandshow('networking')" class="w3-card">Networking</a>
-                        <a ng-click="hideandshow('security_Systems')" class=" w3-card">Security Systems</a>
-                        <a ng-click="hideandshow('storage_solutions')" class="w3-card">storage solutions</a>
-                        <a ng-click="hideandshow('ID_Cards_Printing')" class=" w3-card">ID Cards Printing Machines</a>
-                        <a ng-click="hideandshow('Interactive_Boards')" class="w3-card">Interactive Boards</a>
-                        <a ng-click="hideandshow('Scanners')" class="w3-card">Scanners</a>
-                        <a ng-click="hideandshow('Telecommunication')" class="w3-card">Telecommunication</a>
-                        <a ng-click="hideandshow('DeskAlert_Software')" class="w3-card">DeskAlert Software</a>
-                    </div>
-                    <div class="section-heading">
-                        <h3>LEADERSHIP</h3>
-                        <h2 class="section-title">MEET OUR TEAM</h2>
-                    </div>
-                    <div ng-show="networking">
-                        <h1>networking</h1>
-                        <a href="#"><button ng-click="showHeader = true" class="popup__close">close</button></a>
-                    </div>
-                    <div ng-show="security_Systems">
-                        <h1>security_Systems</h1>
-                        <button ng-click="showHeader = true" class="popup__close">close</button>
-                    </div>
-                    <div ng-show="storage_solutions">
-                        <h1>storage_solutions</h1>
-                        <button ng-click="showHeader = true" class="popup__close">close></button>
-                    </div>
-                    <div ng-show="ID_Cards_Printing">
-                        <h1>ID_Cards_Printing</h1>
-                        <button ng-click="showHeader = true" class="popup__close">close</button>
-                    </div>
-                    <div ng-show="Interactive_Boards">
-                        <h1>Interactive_Boards</h1>
-                        <button ng-click="showHeader = true" class="popup__close">close</button>
+                <div class="modal-content">
+                    <div class="w3-sidebar w3-bar-block" style="width:16%">
+                        <h4>Contact Us</h4>
+                        <a ng-click="hideandshow('networking')" class="w3-bar-item w3-button"> <i class="fa fa-clone"> Networking</i></a>
+                        <a ng-click="hideandshow('security_Systems')" class="w3-bar-item w3-button">Security Systems</a>
+                        <a ng-click="hideandshow('storage_solutions')" class="w3-bar-item w3-button">storage solutions</a>
+                        <a ng-click="hideandshow('ID_Cards_Printing')" class=" w3-bar-item w3-button">ID Cards Printing Machines</a>
+                        <a ng-click="hideandshow('Interactive_Boards')" class="w3-bar-item w3-button">Interactive Boards</a>
+                        <a ng-click="hideandshow('Scanners')" class="w3-bar-item w3-button">Scanners</a>
+                        <a ng-click="hideandshow('Telecommunication')" class="w3-bar-item w3-button">Telecommunication</a>
+                        <a ng-click="hideandshow('DeskAlert_Software')" class="w3-bar-item w3-button">DeskAlert Software</a>
                     </div>
 
-                    <div ng-show="Scanners">
-                        <h1>Scanner</h1>
-                        <button ng-click="showHeader = true" class="popup__close">close</button>
-                    </div>
+                    <div style="margin-left:18%">
+                        <div ng-show="networking">
+                            <div class="section-heading">
+                                <h3>BELIEVING</h3>
+                                <h2 class="section-title">We Build Branded Platforms</h2>
+                                <p class="section-subtitle">Transform how you manage your IT infrastructure</p>
+                            </div>
+                            <!--Content Section-->
+                            <div id="services" class="scrollto clearfix">
+                                <div class="row no-padding-bottom clearfix wow fadeInUp">
+                                    <!--Content Left Side-->
+                                    <div class="col-3">
 
-                    <div ng-show="Telecommunication">
-                        <h1>Telecommunication</h1>
-                        <button ng-click="showHeader = true" class="popup__close">close</button>
-                    </div>
+                                        <img src="images/support.jpg" alt="support" />
+                                    </div>
+                                    <!--End Content Left Side-->
 
-                    <div ng-show="DeskAlert_Software">
-                        <h1>DeskAlert_Software</h1>
-                        <button ng-click="showHeader = true" class="popup__close">close</button>
+                                    <!--Content of the center Side-->
+                                    <div class="col-3">
+                                        <p>We design, install, maintain the system throughout. We provide upgrades and enhancements.
+                                            To meet challenges over the years, we have expert professionals across the world.
+                                            Our main goals are punctuality, productivity and professionalism.
+                                        </p>
+                                        <p>
+                                            challenging business environment. DDC being a global leader in IT services, digital, business solutions, consulting, technology,
+                                            outsourcing and next-generation services, we are helping enterprises renew themselves
+                                            while also creating new avenues to generate value. Our continued industry-leading
+                                            growth is a testament to the certainty our clients experience every day.
+                                        </p>
+
+                                    </div>
+                                    <!--End Content center Side-->
+
+                                    <!--Content Right Side-->
+                                    <div class="col-3">
+                                        <img src="images/dancer1.jpg" alt="Dancer" />
+                                    </div>
+
+                                    <!--End Content Right Side-->
+
+                                </div>
+
+                            </div>
+                            <!--End of Content Section-->
+                        </div>
+                        <div ng-show="security_Systems">
+                            <h1>security_Systems</h1>
+                        </div>
+                        <div ng-show="storage_solutions">
+                            <h1>storage_solutions</h1>
+                        </div>
+                        <div ng-show="ID_Cards_Printing">
+                            <h1>ID_Cards_Printing</h1>
+                        </div>
+                        <div ng-show="Interactive_Boards">
+                            <h1>Interactive_Boards</h1>
+                        </div>
+
+                        <div ng-show="Scanners">
+                            <h1>Scanner</h1>
+                        </div>
+
+                        <div ng-show="Telecommunication">
+                            <h1>Telecommunication</h1>
+                        </div>
+
+                        <div ng-show="DeskAlert_Software">
+                            <h1>DeskAlert_Software</h1>
+                        </div>
                     </div>
                 </div>
-                <!--End model popup-->
-
+            </div>
+            <!-- End model popup-->
 
         </main>
         <!--End Main Content Area-->
@@ -804,56 +841,59 @@
         </footer>
         <!--End of Footer-->
 
-        </div>
+    </div>
 
-        <!-- Include JavaScript resources -->
-        <script src="js/jquery.1.8.3.min.js"></script>
-        <script src="js/wow.min.js"></script>
-        <script src="js/featherlight.min.js"></script>
-        <script src="js/featherlight.gallery.min.js"></script>
-        <script src="js/jquery.enllax.min.js"></script>
-        <script src="js/jquery.scrollUp.min.js"></script>
-        <script src="js/jquery.easing.min.js"></script>
-        <script src="js/jquery.stickyNavbar.min.js"></script>
-        <script src="js/jquery.waypoints.min.js"></script>
-        <script src="js/images-loaded.min.js"></script>
-        <script src="js/lightbox.min.js"></script>
-        <script src="js/site.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
-        <script>
-            function myMap() {
-                var mapOptions = {
-                    center: new google.maps.LatLng(24.467260, 54.375150),
-                    zoom: 13,
-                    mapTypeId: google.maps.MapTypeId.ROADMAP
-                }
-                var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+    <!-- Include JavaScript resources -->
+    <script src="js/jquery.1.8.3.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/featherlight.min.js"></script>
+    <script src="js/featherlight.gallery.min.js"></script>
+    <script src="js/jquery.enllax.min.js"></script>
+    <script src="js/jquery.scrollUp.min.js"></script>
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/jquery.stickyNavbar.min.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/images-loaded.min.js"></script>
+    <script src="js/lightbox.min.js"></script>
+    <script src="js/site.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+    <script src="js/animatedModal.min.js"></script>
+    <script>
+        function myMap() {
+            var mapOptions = {
+                center: new google.maps.LatLng(24.467260, 54.375150),
+                zoom: 13,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
             }
-        </script>
-        <script>
-            $(document).ready(function () {
-                $('.customer-logos').slick({
-                    slidesToShow: 6,
-                    slidesToScroll: 1,
-                    autoplay: true,
-                    autoplaySpeed: 1500,
-                    arrows: false,
-                    dots: false,
-                    pauseOnHover: false,
-                    responsive: [{
-                        breakpoint: 768,
-                        settings: {
-                            slidesToShow: 4
-                        }
-                    }, {
-                        breakpoint: 520,
-                        settings: {
-                            slidesToShow: 3
-                        }
-                    }]
-                });
-            });</script>
-        <script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
+            var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+        }
+    </script>
+    <script>
+        $(document).ready(function () {
+            $("#demo01").animatedModal();
+            $('.customer-logos').slick({
+                slidesToShow: 6,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 1500,
+                arrows: false,
+                dots: false,
+                pauseOnHover: false,
+                responsive: [{
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 4
+                    }
+                }, {
+                    breakpoint: 520,
+                    settings: {
+                        slidesToShow: 3
+                    }
+                }]
+            });
+        });</script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
 </body>
 
 </html>
